@@ -1,26 +1,27 @@
-import React, { useState } from 'react';
-import BookServiceFrom from '../BookServiceFrom/BookServiceFrom';
+import { useHistory } from "react-router";
+
+
 
 const ServiceDetail = ({service}) => {
-    const [modalIsOpen, setIsOpen] = useState(false);
-    function openModal() {
-        setIsOpen(true);
-    }
+  
+    const {name,price , imageURL,_id} = service;
+    console.log(service);
 
-    function closeModal() {
-        setIsOpen(false);
+    const history = useHistory()
+    const handleBook = (id) => {
+        history.push(`/book/${id}`);
     }
-    
+   
 
     return (
         
             <div className="col-md-4 text-center ">
-                <img style={{height: '100px'}} src={service.img} alt="" />
-                <h5 className="mt-3 mb-3">{service.name}</h5>
-                <p className="mt-3 mb-3">${service.price}</p>
+                <img style={{height: '100px'}} src={imageURL} alt="" />
+                <h5 className="mt-3 mb-3">{name}</h5>
+                <p className="mt-3 mb-3">${price}</p>
                 <p className="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, quaerat?</p>
-                 <button onClick={openModal}  className='btn btn-primary' >Book Service</button>  
-                 <BookServiceFrom modalIsOpen={modalIsOpen} bookingOn={service.price} closeModal={closeModal}></BookServiceFrom> 
+                 <button onClick={() => handleBook(price)} className='btn btn-primary' >Book Service</button>  
+            
             </div>
         
     );

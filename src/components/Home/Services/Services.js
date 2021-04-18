@@ -1,32 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ServiceDetail from '../ServiceDetail/ServiceDetail';
-import iphone from '../../../images/Iphone.jpg'
-import samsung from '../../../images/Samsung.jpg'
-import hawai from '../../../images/Hawai.jpg'
-
-
-const serviceData = [
-    { 
-        _id: '5e8df50be6e8231764dc23de',
-        name: 'I Phone',
-        img: iphone,
-        price:45,
-    },
-    {  
-        _id: '5e8df578e6e8231764dc23df',
-        name: 'Samsung',
-        img: samsung,
-        price:35,
-    },
-    {
-        _id: '5e8df5aee6e8231764dc23e0',
-        name: 'Hawai',
-        img: hawai,
-        price:36,
-    }
-]
 
 const Services = () => {
+
+    const [ serviceData, setServiceData] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/books')
+            .then(res => res.json())
+            .then(data =>  setServiceData(data))
+    }, [])
+            
     return (
         <section className="services-container mt-5">
         <div className="text-center">

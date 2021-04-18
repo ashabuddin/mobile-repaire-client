@@ -1,34 +1,29 @@
-
 import React from 'react';
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light">
-
-       
-
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto">
-                <li className="nav-item active">
-                    <a className="nav-link ms-5 text-white" href="#">Home </a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link ms-5 text-white" href="#">About</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link ms-5 text-white" href="#">About</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link ms-5 text-white" href="#">About</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link ms-5 text-white" href="#">About</a>
-                </li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
+            <div class="container-fluid">
                
-                
-            </ul>
-        </div>
-    </nav>
+               
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto text-white">
+                        <li class="nav-item ">
+                            <a class="nav-link active ms-4" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ms-4" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ms-4" href="/dashboard">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled ms-4" href="/dashboard" >Admin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     );
 };
 
