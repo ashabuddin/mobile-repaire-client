@@ -1,24 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
-            <div class="container-fluid">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light  ">
+            <div className="container-fluid">
                
                
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto text-white">
-                        <li class="nav-item ">
-                            <a class="nav-link active ms-4" aria-current="page" href="#">Home</a>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav ms-auto text-white">
+                        <li className="nav-item ">
+                             <Link className="nav-link ms-5" to='/'>Home</Link>
+                            
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link ms-4" href="/login">Login</a>
+                        <li className="nav-item">
+                             <Link className="nav-link ms-5"  to='/login'>Login</Link>
+                           
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link ms-4" href="/dashboard">Dashboard</a>
+                        <li className="nav-item">
+                            <Link className="nav-link ms-5" to='/dashboard'>Dashboard</Link>
+                            
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled ms-4" href="/dashboard" >Admin</a>
+                        <li className="nav-item">
+                            <Link className="nav-link ms-5" to='/dashboard'>Admin</Link>
                         </li>
                     </ul>
                 </div>
