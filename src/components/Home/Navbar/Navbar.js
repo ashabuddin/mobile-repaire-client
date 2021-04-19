@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light  ">
             <div className="container-fluid">
-               
+               <h1 className='text-primary'>Mobile Repair</h1>
                
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto text-white">

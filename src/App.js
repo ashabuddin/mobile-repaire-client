@@ -36,27 +36,27 @@ function App() {
             <Route path='/login'>
                 <Login/>
             </Route>
-            <Route path='/dashboard'>
+            <PrivateRoute path='/dashboard'>
               <Dashboard/>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path='/review'>
               <Review/>
             </PrivateRoute>
             <Route path='/book/:id'>
               <Book/>
             </Route>
-            <Route path='/serviceList'>
+            <PrivateRoute path='/serviceList'>
               <ServiceList/>
-            </Route>
+            </PrivateRoute>
             <Route path='/makeAdmin'>
               <MakeAdmin/>
             </Route>
-            <Route path='/bookList'>
+            <PrivateRoute path='/bookList'>
               <BookList/>
-            </Route>
-           <Route path='/addBook'>
+            </PrivateRoute>
+           <PrivateRoute path='/addBook'>
               <AddBook/>
-           </Route>
+           </PrivateRoute>
            <Route path='/admin'>
              <Admin/>
            </Route>
