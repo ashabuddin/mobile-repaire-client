@@ -7,7 +7,7 @@ const ServiceList = () => {
     const [serviceList, setServiceList] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/mobile')
+        fetch('https://aqueous-cliffs-02461.herokuapp.com/mobile')
             .then(res => res.json())
             .then(data => setServiceList(data))
     }, [])

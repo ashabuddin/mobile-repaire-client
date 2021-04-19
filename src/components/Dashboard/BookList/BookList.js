@@ -7,7 +7,7 @@ const BookList = () => {
     const [bookList, setBookList] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/user?email='+loggedInUser.email)
+        fetch('https://aqueous-cliffs-02461.herokuapp.com/user?email='+loggedInUser.email)
             .then(res => res.json())
             .then(data => setBookList(data))
     }, [])

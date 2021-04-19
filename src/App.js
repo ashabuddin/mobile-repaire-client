@@ -11,10 +11,8 @@ import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 import Review from "./components/Dashboard/Review/Review";
 import Book from "./components/Dashboard/Book/Book";
 import ServiceList from "./components/Dashboard/ServiceList/ServiceList";
-import MakeAdmin from "./components/Dashboard/MakeAdmin/MakeAdmin";
 import BookList from "./components/Dashboard/BookList/BookList";
 import AddBook from "./components/Dashboard/AddBook/AddBook";
-import Admin from "./components/Dashboard/Admin/Admin";
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 
 
@@ -48,18 +46,13 @@ function App() {
             <PrivateRoute path='/serviceList'>
               <ServiceList/>
             </PrivateRoute>
-            <Route path='/makeAdmin'>
-              <MakeAdmin/>
-            </Route>
             <PrivateRoute path='/bookList'>
               <BookList/>
             </PrivateRoute>
            <PrivateRoute path='/addBook'>
               <AddBook/>
            </PrivateRoute>
-           <Route path='/admin'>
-             <Admin/>
-           </Route>
+          
           </Switch>
       </Router>
     </UserContext.Provider>

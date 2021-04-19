@@ -14,7 +14,7 @@ const Review = () => {
             imageURL: imageURL,
 
         }
-        const url = `http://localhost:5000/addReview`;
+        const url = `https://aqueous-cliffs-02461.herokuapp.com/addReview`;
 
         fetch(url, {
             method: 'POST',

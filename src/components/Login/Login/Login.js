@@ -5,7 +5,6 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { UserContext } from '../../../App';
 import { useHistory, useLocation } from 'react-router';
-import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 
 
 const Login = () => {
