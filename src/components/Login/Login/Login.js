@@ -38,7 +38,7 @@ const Login = () => {
     return (
         <div className="row login-page container ">
             <div className='col-md-3'>
-                    <Sidebar/>
+                  
             </div>
             <div className="col-md-6 text-center shadow p-5 " style={{ height: "100vh" }}>
 

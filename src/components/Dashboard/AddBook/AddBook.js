@@ -1,16 +1,20 @@
 
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
+import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
 
 const AddBook = () => {
+
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [imageURL, setImageURL] = useState(null)
     const onSubmit = data => {
         const bookData = {
             name: data.name,
-            quote: data.quote,
+           email: data.email,
             price: data.price,
             imageURL: imageURL,
 
@@ -22,7 +26,7 @@ const AddBook = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(bookData)
+            body: JSON.stringify(bookData )
         })
             .then(res => console.log('server side response', res))
     };
@@ -54,7 +58,7 @@ const AddBook = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                     <div className="form-group">
-                        <input type="text" {...register("name")} name="name" placeholder="name" className="form-control" />
+                        <input type="text" {...register("name")} name="name" placeholder="phone name" className="form-control" />
                         {errors.name && <span className="text-danger">This field is required</span>}
                     </div>
 
@@ -64,7 +68,7 @@ const AddBook = () => {
                     </div>
 
                     <div className="form-group">
-                        <input type="text" {...register("quote", { required: true })} name="quote" placeholder="quote" className="form-control" />
+                        <input type="text" {...register("email", { required: true })} name="email" placeholder="email" className="form-control" />
                         {errors.phone && <span className="text-danger">This field is required</span>}
                     </div>
                     <div className="form-group">
@@ -74,7 +78,7 @@ const AddBook = () => {
 
                     <div className="form-group text-right">
 
-                        <button type="submit" className="btn btn-brand text-right">AddBook</button>
+                        <button  type="submit" className="btn btn-primary text-right">AddBook</button>
                     </div>
 
                 </form>
