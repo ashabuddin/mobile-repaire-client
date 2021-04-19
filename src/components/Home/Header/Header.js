@@ -1,5 +1,6 @@
 
 import React from 'react';
+import FixDevice from '../FixDevice/FixDevice';
 import Footer from '../Footer/Footer';
 import HeaderMain from '../HeaderMain/HeaderMain';
 import MobileRepair from '../MobileRepair/MobileRepair';
@@ -16,6 +17,9 @@ const Header = () => {
            <MobileRepair/>
            <Services/>
            <Testimonials/>
+           <FixDevice/>
+           <br/>
+           <br/>
            <Footer/>
         </div>
     );

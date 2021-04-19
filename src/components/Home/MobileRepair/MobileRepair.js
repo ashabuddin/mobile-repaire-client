@@ -6,7 +6,7 @@ import mobile3 from '../../../images/mobile3.jpg';
 const MobileRepair = () => {
     return (
         <section className='row mt-5 pt-5'>
-            <h3>We ae</h3>
+            <h3 className='text-center text-primary'>We are repair Mobile</h3>
                 <div className='col-md-4'>
                     <img style={{height:'300px'}} src={mobile1} alt=""/>
                 </div>
